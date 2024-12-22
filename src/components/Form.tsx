@@ -8,6 +8,7 @@ import { FormEvent } from "react";
 import { z } from "zod";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import uploadImg from '@/assets/icon-upload.svg';
 
 const formSchema = z.object({
   fullName: z.string().min(5, {
@@ -95,7 +96,7 @@ export default function Form() {
               className="flex flex-col items-center cursor-pointer"
             >
               <motion.img
-                src="src/assets/icon-upload.svg"
+                src={uploadImg}
                 alt="Upload Icon"
                 className="w-12 h-12 mb-2"
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -157,7 +158,7 @@ export default function Form() {
           variants={itemVariants}
         >
           <img
-            src="src/assets/icon-info.svg"
+            src={uploadImg}
             alt="Info Icon"
             className="w-6 h-6"
           />

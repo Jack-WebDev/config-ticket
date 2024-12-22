@@ -1,5 +1,9 @@
 import { useFormContext } from "@/context/FormContext";
 import { motion } from "framer-motion";
+import logo from '@/assets/logo-mark.svg';
+import githubLogo from '@/assets/icon-github.svg';
+
+
 
 export default function GeneratedTicket() {
   const { formData } = useFormContext();
@@ -88,7 +92,7 @@ export default function GeneratedTicket() {
               {...floatAnimation}
             >
               <img
-                src="/src/assets/logo-mark.svg"
+                src={logo}
                 alt="Devs Conf logo"
                 className="h-10 object-contain"
               />
@@ -103,7 +107,6 @@ export default function GeneratedTicket() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            {/* Avatar */}
             <motion.div
               className="relative group"
               whileHover={{ scale: 1.1 }}
@@ -131,7 +134,7 @@ export default function GeneratedTicket() {
                 whileHover={{ scale: 1.05 }}
               >
                 <img
-                  src="src/assets/icon-github.svg"
+                  src={githubLogo}
                   alt="GitHub Icon"
                   className="h-5 w-5"
                 />
